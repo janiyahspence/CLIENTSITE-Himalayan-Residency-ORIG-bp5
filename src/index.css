@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary-700 text-white px-8 py-3 font-medium tracking-wide uppercase text-sm hover:bg-primary-800 transition-all duration-300 inline-block;
+  }
+
+  .btn-secondary {
+    @apply border-2 border-white text-white px-8 py-3 font-medium tracking-wide uppercase text-sm hover:bg-white hover:text-primary-900 transition-all duration-300 inline-block;
+  }
+
+  .btn-outline {
+    @apply border-2 border-primary-700 text-primary-700 px-8 py-3 font-medium tracking-wide uppercase text-sm hover:bg-primary-700 hover:text-white transition-all duration-300 inline-block;
+  }
+
+  .section-title {
+    @apply font-serif text-4xl md:text-5xl text-neutral-900 mb-4;
+  }
+
+  .section-subtitle {
+    @apply text-secondary-600 uppercase tracking-widest text-sm font-medium mb-2;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  }
+}
